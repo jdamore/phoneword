@@ -21,6 +21,13 @@ namespace phoneword.iOS
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
 
+			// create a new window instance based on the screen size
+			UIWindow window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+			ViewController viewController = new ViewController();
+			window.RootViewController = viewController;
+			window.MakeKeyAndVisible();
+
 			return true;
 		}
 

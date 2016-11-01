@@ -11,27 +11,24 @@ using UIKit;
 
 namespace phoneword.iOS
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("FirstView")]
+    partial class FirstView
     {
         [Outlet]
-        UIKit.UIButton Button { get; set; }
+        [GeneratedCode ("iOS Designer", "1.0")]
+        public UIKit.UIButton CallButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton CallButton { get; set; }
+        public UIKit.UILabel PhonewordLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIView MainView { get; set; }
+        public UIKit.UITextField PhonewordText { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField PhoneNumberText { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton TranslateButton { get; set; }
+        public UIKit.UIButton TranslateButton { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -40,14 +37,14 @@ namespace phoneword.iOS
                 CallButton = null;
             }
 
-            if (MainView != null) {
-                MainView.Dispose ();
-                MainView = null;
+            if (PhonewordLabel != null) {
+                PhonewordLabel.Dispose ();
+                PhonewordLabel = null;
             }
 
-            if (PhoneNumberText != null) {
-                PhoneNumberText.Dispose ();
-                PhoneNumberText = null;
+            if (PhonewordText != null) {
+                PhonewordText.Dispose ();
+                PhonewordText = null;
             }
 
             if (TranslateButton != null) {

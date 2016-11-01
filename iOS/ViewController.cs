@@ -7,39 +7,40 @@ namespace phoneword.iOS
 {
 	public partial class ViewController : UIViewController
 	{
-		public ViewController(IntPtr handle) : base(handle)
-		{
-		}
+		FirstView v;
 
 		public override void ViewDidLoad()
 		{
-			//base.ViewDidLoad();
+			base.ViewDidLoad();
+			v = FirstView.Create();
+			v.Frame = View.Frame;
+			View.AddSubview(v);
 
 			string translatedNumber = "";
 
-			TranslateButton.TouchUpInside += (object sender, EventArgs e) =>
+			v.TranslateButton.TouchUpInside += (object sender, EventArgs e) =>
 			{
 				// Convert the phone number with text to a number
 				// using PhoneTranslator.cs
 				translatedNumber = PhoneTranslator.ToNumber(
-					PhoneNumberText.Text);
+					v.PhonewordText.Text);
 
 				// Dismiss the keyboard if text field was tapped
-				PhoneNumberText.ResignFirstResponder();
+				v.PhonewordText.ResignFirstResponder();
 
 				if (translatedNumber == "")
 				{
-					CallButton.SetTitle("Call ", UIControlState.Normal);
-					CallButton.Enabled = false;
+					v.CallButton.SetTitle("Call ", UIControlState.Normal);
+					v.CallButton.Enabled = false;
 				}
 				else {
-					CallButton.SetTitle("Call " + translatedNumber,
+					v.CallButton.SetTitle("Call " + translatedNumber,
 						UIControlState.Normal);
-					CallButton.Enabled = true;
+					v.CallButton.Enabled = true;
 				}
 			};
 
-			CallButton.TouchUpInside += (object sender, EventArgs e) =>
+			v.CallButton.TouchUpInside += (object sender, EventArgs e) =>
 			{
 				// Use URL handler with tel: prefix to invoke Apple's Phone app...
 				var url = new NSUrl("tel:" + translatedNumber);
@@ -53,11 +54,9 @@ namespace phoneword.iOS
 				}
 			};
 		}
-
 		public override void DidReceiveMemoryWarning()
 		{
 			base.DidReceiveMemoryWarning();
-			// Release any cached data, images, etc that aren't in use.		
 		}
 	}
 }
