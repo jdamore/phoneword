@@ -121,6 +121,7 @@
     <Compile Include="FirstView.designer.cs">
       <DependentUpon>FirstView.cs</DependentUpon>
     </Compile>
+    <Compile Include="FirstViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="FirstView.xib" />
