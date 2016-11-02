@@ -107,6 +107,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -115,17 +118,17 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="RootViewController.cs" />
-    <Compile Include="PhoneTranslator.cs" />
-    <Compile Include="FirstView.cs" />
-    <Compile Include="FirstView.designer.cs">
+    <Compile Include="Controllers\FirstViewController.cs" />
+    <Compile Include="Controllers\RootViewController.cs" />
+    <Compile Include="Views\FirstView.cs" />
+    <Compile Include="Views\FirstView.designer.cs">
       <DependentUpon>FirstView.cs</DependentUpon>
     </Compile>
-    <Compile Include="FirstViewController.cs" />
+    <Compile Include="Helpers\PhoneTranslator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="FirstView.xib" />
-    <InterfaceDefinition Include="LaunchView.xib" />
+    <InterfaceDefinition Include="Views\LaunchView.xib" />
+    <InterfaceDefinition Include="Views\FirstView.xib" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\vapour.jpg" />
