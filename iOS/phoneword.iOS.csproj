@@ -124,6 +124,10 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="FirstView.xib" />
+    <InterfaceDefinition Include="LaunchView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\vapour.jpg" />
   </ItemGroup>
   <Import Project="..\phoneword\phoneword.projitems" Label="Shared" Condition="Exists('..\phoneword\phoneword.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
