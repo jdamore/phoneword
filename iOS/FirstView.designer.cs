@@ -16,19 +16,19 @@ namespace phoneword.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        public UIKit.UIButton CallButton { get; set; }
+        UIKit.UIButton CallButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        public UIKit.UILabel PhonewordLabel { get; set; }
+        UIKit.UILabel PhonewordLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        public UIKit.UITextField PhonewordText { get; set; }
+        UIKit.UITextField PhonewordText { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        public UIKit.UIButton TranslateButton { get; set; }
+        UIKit.UIButton TranslateButton { get; set; }
 
         void ReleaseDesignerOutlets ()
         {

@@ -14,16 +14,29 @@ namespace phoneword.iOS
 
 		public static FirstView Create()
 		{
-
 			var arr = NSBundle.MainBundle.LoadNib("FirstView", null, null);
 			var v = Runtime.GetNSObject<FirstView>(arr.ValueAt(0));
-
 			return v;
 		}
 
 		public override void AwakeFromNib()
 		{
 			//PhonewordLabel.Text = "hello from the View class";
+		}
+
+		public UIKit.UIButton GetCallButton()
+		{
+			return CallButton;
+		}
+
+		public UIKit.UIButton GetTranslateButton()
+		{
+			return TranslateButton;
+		}
+
+		public UIKit.UITextField GetPhonewordText()
+		{
+			return PhonewordText;
 		}
     }
 }
