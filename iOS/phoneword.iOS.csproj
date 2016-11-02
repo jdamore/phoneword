@@ -115,7 +115,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
+    <Compile Include="RootViewController.cs" />
     <Compile Include="PhoneTranslator.cs" />
     <Compile Include="FirstView.cs" />
     <Compile Include="FirstView.designer.cs">

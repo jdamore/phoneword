@@ -5,14 +5,12 @@ using UIKit;
 
 namespace phoneword.iOS
 {
-	public partial class ViewController : UIViewController
+	public partial class RootViewController : UIViewController
 	{
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-
 			FirstViewController firstViewController = new FirstViewController();
-			//PresentViewController(firstViewController, true, null);
 			View.AddSubview(firstViewController.View);
 		}
 

@@ -23,11 +23,8 @@ namespace phoneword.iOS
 
 			// create a new window instance based on the screen size
 			UIWindow window = new UIWindow(UIScreen.MainScreen.Bounds);
-
-			ViewController viewController = new ViewController();
-			window.RootViewController = viewController;
+			window.RootViewController = new RootViewController();
 			window.MakeKeyAndVisible();
-
 			return true;
 		}
 
