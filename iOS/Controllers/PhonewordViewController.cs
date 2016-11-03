@@ -5,9 +5,19 @@ using UIKit;
 
 namespace phoneword.iOS
 {
-	public partial class FirstViewController : UIViewController
+	public class PhonewordViewController : UIViewController
 	{
-		FirstView view;
+		PhonewordView view;
+
+		public PhonewordViewController()
+		{
+			this.Title = "Phone Word";
+			view = PhonewordView.Create();
+			view.Frame = View.Frame;
+			view.GetTranslateButton().TouchUpInside += this.translateEventHandler;
+			view.GetCallButton().TouchUpInside += this.callEventHandler;
+			View = view;
+		}
 
 		private void translateEventHandler(object sender, EventArgs e)
 		{
@@ -39,15 +49,5 @@ namespace phoneword.iOS
 			}
 		}
 
-		public override void ViewDidLoad()
-		{
-			base.ViewDidLoad();
-			view = FirstView.Create();
-			view.Frame = View.Frame;
-			view.GetTranslateButton().TouchUpInside += this.translateEventHandler;
-			view.GetCallButton().TouchUpInside += this.callEventHandler;
-			View.AddSubview(view);
-
-		}
 	}
 }

@@ -118,17 +118,23 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Controllers\FirstViewController.cs" />
-    <Compile Include="Controllers\RootViewController.cs" />
-    <Compile Include="Views\FirstView.cs" />
-    <Compile Include="Views\FirstView.designer.cs">
-      <DependentUpon>FirstView.cs</DependentUpon>
+    <Compile Include="Controllers\PhonewordViewController.cs" />
+    <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="Views\PhonewordView.cs" />
+    <Compile Include="Views\PhonewordView.designer.cs">
+      <DependentUpon>PhonewordView.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\PhoneTranslator.cs" />
+    <Compile Include="Controllers\FlipitViewController.cs" />
+    <Compile Include="Views\FlipitView.cs" />
+    <Compile Include="Views\FlipitView.designer.cs">
+      <DependentUpon>FlipitView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Views\LaunchView.xib" />
-    <InterfaceDefinition Include="Views\FirstView.xib" />
+    <InterfaceDefinition Include="Views\PhonewordView.xib" />
+    <InterfaceDefinition Include="Views\FlipitView.xib" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\vapour.jpg" />

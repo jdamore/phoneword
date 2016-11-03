@@ -6,16 +6,16 @@ using ObjCRuntime;
 
 namespace phoneword.iOS
 {
-    public partial class FirstView : UIView
+    public partial class PhonewordView : UIView
     {
-        public FirstView (IntPtr handle) : base (handle)
+        public PhonewordView (IntPtr handle) : base (handle)
         {
         }
 
-		public static FirstView Create()
+		public static PhonewordView Create()
 		{
-			var arr = NSBundle.MainBundle.LoadNib("FirstView", null, null);
-			var v = Runtime.GetNSObject<FirstView>(arr.ValueAt(0));
+			var arr = NSBundle.MainBundle.LoadNib("PhonewordView", null, null);
+			var v = Runtime.GetNSObject<PhonewordView>(arr.ValueAt(0));
 			return v;
 		}
 

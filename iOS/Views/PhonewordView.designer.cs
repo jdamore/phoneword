@@ -11,8 +11,8 @@ using UIKit;
 
 namespace phoneword.iOS
 {
-    [Register ("FirstView")]
-    partial class FirstView
+    [Register ("PhonewordView")]
+    partial class PhonewordView
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]

@@ -38,8 +38,6 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
-	<key>UIMainNibFile</key>
-	<string>FirstView</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchView</string>
 </dict>
