@@ -20,12 +20,15 @@ namespace phoneword.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-			phonewordViewController.NavigationItem.SetRightBarButtonItem(
-				new UIBarButtonItem(UIBarButtonSystemItem.Action, (sender, args) =>
-				{
-					PushViewController(flipitViewController, true);
-				}
-			), true);
+			if (Toggle.Value("ViewFlipit"))
+			{
+				phonewordViewController.NavigationItem.SetRightBarButtonItem(
+					new UIBarButtonItem(UIBarButtonSystemItem.Action, (sender, args) =>
+					{
+						PushViewController(flipitViewController, true);
+					}
+				), true);
+			}
 
 		}
 	}

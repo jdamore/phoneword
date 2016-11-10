@@ -130,6 +130,7 @@
     <Compile Include="Views\FlipitView.designer.cs">
       <DependentUpon>FlipitView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Toggle.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Views\LaunchView.xib" />
@@ -138,6 +139,9 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\vapour.jpg" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'=='Debug'">
+    <BundleResource Include="Settings.bundle\Root.plist" />
   </ItemGroup>
   <Import Project="..\phoneword\phoneword.projitems" Label="Shared" Condition="Exists('..\phoneword\phoneword.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
